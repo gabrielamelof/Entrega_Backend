@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Usuario, Disciplina, ReservaAmbiente
+from .models import Usuario, Disciplina, ReservaAmbiente, Sala
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 class UsuarioSerializer(serializers.ModelSerializer):
@@ -16,6 +16,11 @@ class ReservaAmbienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = ReservaAmbiente
         fields = '__all__'
+
+class SalaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Sala
+        fields = "__all__"
 
 class LoginSerializer(TokenObtainPairSerializer):
     username = serializers.CharField()

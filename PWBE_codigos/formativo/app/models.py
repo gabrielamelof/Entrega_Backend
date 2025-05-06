@@ -9,7 +9,7 @@ class Usuario(AbstractUser):
     ]
 
     tipo = models.CharField(max_length=1, choices=TIPO_CHOICES, default='P')
-    ni = models.IntegerField()
+    ni = models.IntegerField(unique=True)
     telefone = models.CharField(max_length=20, blank=True, null=True)
     data_nascimento = models.DateField()
     data_contratacao = models.DateField()
