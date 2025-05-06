@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bom ju bb</h1>
+    <ul>
+        {% for i in postagens%}
+        <li>
+            <h2>{{i.titulo}}</h2>
+            <p>{{i.conteudo}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</html>
